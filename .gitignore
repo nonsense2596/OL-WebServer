@@ -338,3 +338,8 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# my used libraries
+wwwroot/leaflet
+wwwroot/marker
+wwwroot/lib
