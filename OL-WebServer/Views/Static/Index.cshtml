@@ -1,0 +1,66 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Static";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="~/marker/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="~/marker/dist/MarkerCluster.Default.css" />
+}
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 modal-ipad"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 font-weight-bold">Y: <span class="modal-y font-weight-normal"></span></div>
+                    <div class="col-6 font-weight-bold">X: <span class="modal-x font-weight-normal"></span></div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-3 font-weight-bold">PM10</div>
+                    <div class="col-9 font-weight-bold">Date</div>
+                </div>
+                <div class="row">
+                    <div class="col-3 modal-pm10"></div>
+                    <div class="col-9 modal-date"></div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div id="mapid" class="col-12"></div>
+        <div id="sider"><div id="sidercontent"></div></div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="~/leaflet/leaflet.js"></script>
+    <script src="~/marker/dist/leaflet.markercluster.js"></script>
+    <script src="~/js/myicons.js"></script>
+    <script src="~/js/Static/controller.js"></script>
+}

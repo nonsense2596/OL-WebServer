@@ -1,0 +1,82 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Mobile";
+}
+
+
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="~/marker/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="~/marker/dist/MarkerCluster.Default.css" />
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div id="mapid" class="col-12"></div>
+    </div>
+</div>
+
+
+
+
+
+@section Scripts
+{
+    <script src="~/leaflet/leaflet.js"></script>
+    <script src="~/marker/dist/leaflet.markercluster.js"></script>
+    <script src="~/js/myicons.js"></script>
+    <script src="~/js/Mobile/controller.js"></script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@*<script>
+        var i = 0;
+        function change() {
+            if (i % 2 == 0) {
+                document.getElementById("asd").style.backgroundColor = "green";
+            }
+            else {
+                document.getElementById("asd").style.backgroundColor = "blue";
+            }
+            i++;
+        }
+        function xhrfun() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://localhost:44372/api/MobileData", true);
+            xhr.send();
+            xhr.onload = () => {
+                // process response
+                if (xhr.status == 200) {
+                    // parse JSON data
+                    //console.log(JSON.parse(xhr.response));
+                    //document.getElementById("trgt").innerHTML = JSON.stringify(xhr.response,null,4);
+                    var data = xhr.responseText;
+                    var arr = JSON.parse(data);
+                    var out = '';
+                    for (i = 0; i < arr.length; i++) {
+                        out += arr[i].item1 + ' ' + arr[i].item2 + ' ' + arr[i].item3 + '<br>';
+                    }
+                    document.getElementById("trgt").innerHTML = out;
+                } else {
+                    console.error('Error!');
+                }
+            };
+        }
+    </script>*@
