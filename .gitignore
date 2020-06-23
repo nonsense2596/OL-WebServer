@@ -340,6 +340,6 @@ ASALocalRun/
 healthchecksdb
 
 # my used libraries
-wwwroot/leaflet
-wwwroot/marker
-wwwroot/lib
+OL-WebServer/wwwroot/leaflet
+OL-WebServer/wwwroot/marker
+OL-WebServer/wwwroot/lib
